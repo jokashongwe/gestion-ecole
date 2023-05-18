@@ -54,6 +54,7 @@ export default class Administrator {
                                 that.bootstrapToggle('toggle');
                                 stopchange = false;
                             }
+                            console.log("status: ", status)
                             toastr.error(status);
                         }
                     }).catch((error) => {
@@ -63,6 +64,7 @@ export default class Administrator {
                             that.bootstrapToggle('toggle');
                             stopchange = false;
                         }
+                        console.log("status: ", status)
                         toastr.error(status);
 
                     });
@@ -422,7 +424,7 @@ export default class Administrator {
     }
 
     static setidcardTemplateData  (data) {
-            // console.log(data);
+            console.log("Data: ", data);
             if(data.bg_color) {
                 $('#idFrame').contents().find('body div.card').css('background-color', data.bg_color);
             }
